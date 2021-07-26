@@ -1,3 +1,6 @@
+$shadow : 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
+$general-p : 16px;
+
 body {
     font: 100% "Space Mono", monospace;
     color: #2748B3;
@@ -14,39 +17,35 @@ article {
     display: flex;
     flex-wrap: wrap
 }
+
 @mixin box-shadow {
-    -webkit-box-shadow: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
-    -moz-box-shadow: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
-    box-shadow: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
 }
 
-
-article section {
+article{
+section {
     flex-grow: 1;
     flex-basis: 45%;
     border: 1px silver solid;
 
-    // ---Before using mixin---
-    // -webkit-box-shadow: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
-    // -moz-box-shadow: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
-    // box-shadow: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
-
-    // ---After using mixin---
     @include box-shadow;
 
-    padding: 16px;
+    padding: $general-p;
     margin: 16px;
     clear: both;
     overflow: auto;
     box-sizing: border-box;
 }
-
-article section#selling-points {
-    flex-grow: 2;
-    flex-basis: 100%
+#selling-points {
+flex-grow: 2;
+flex-basis: 100%
+}
 }
 
-article code {
+article{
+    code {
     background: #000;
     border: 1px solid #ddd;
     color: #666;
@@ -60,16 +59,15 @@ article code {
     padding: 1em 1.5em;
     display: block;
     word-wrap: break-word
-}
-
-article code.before {
-    float: left;
-    width: 40%
-}
-
-article code.after {
-    float: right;
-    width: 40%
+    }
+    &.before {
+        float: left;
+        width: 40%
+    }
+    &.after {
+        float: right;
+        width: 40%
+    }
 }
 
 h1,
@@ -85,14 +83,11 @@ h1 {
 h6 {
     text-align: center;
     font-size: 2em;
-    padding: 32px;
+    padding: $general-p*2;
     margin-bottom: 0px
 }
 
-.message,
-.success,
-.error,
-.warning {
+.message{
     border: 1px solid #ccc;
     padding: 10px;
     color: #2748B3;
@@ -101,13 +96,16 @@ h6 {
 }
 
 .success {
+    @extend .message;
     background-color: green
 }
 
 .error {
+    @extend .message;
     background-color: red
 }
 
 .warning {
+    @extend .message;
     background-color: orange
 }

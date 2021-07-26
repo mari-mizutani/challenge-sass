@@ -35,7 +35,7 @@ article section {
           box-sizing: border-box;
 }
 
-article section#selling-points {
+article #selling-points {
   -webkit-box-flex: 2;
       -ms-flex-positive: 2;
           flex-grow: 2;
@@ -59,12 +59,12 @@ article code {
   word-wrap: break-word;
 }
 
-article code.before {
+article.before {
   float: left;
   width: 40%;
 }
 
-article code.after {
+article.after {
   float: right;
   width: 40%;
 }
@@ -86,10 +86,7 @@ h6 {
   margin-bottom: 0px;
 }
 
-.message,
-.success,
-.error,
-.warning {
+.message, .success, .error, .warning {
   border: 1px solid #ccc;
   padding: 10px;
   color: #2748B3;
