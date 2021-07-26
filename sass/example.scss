@@ -14,14 +14,26 @@ article {
     display: flex;
     flex-wrap: wrap
 }
+@mixin box-shadow {
+    -webkit-box-shadow: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
+    -moz-box-shadow: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
+    box-shadow: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
+}
+
 
 article section {
     flex-grow: 1;
     flex-basis: 45%;
     border: 1px silver solid;
-    -webkit-box-shadow: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
-    -moz-box-shadow: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
-    box-shadow: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
+
+    // ---Before using mixin---
+    // -webkit-box-shadow: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
+    // -moz-box-shadow: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
+    // box-shadow: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
+
+    // ---After using mixin---
+    @include box-shadow;
+
     padding: 16px;
     margin: 16px;
     clear: both;
