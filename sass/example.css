@@ -105,4 +105,22 @@ h6 {
 .warning {
   background-color: orange;
 }
+
+a.blue, a.red {
+  padding: 8px;
+  color: #fff;
+}
+
+a.blue:hover, a.red:hover {
+  color: blue;
+  background-color: #fff;
+}
+
+a.red {
+  padding: 16px;
+}
+
+a.red:hover {
+  color: red;
+}
 /*# sourceMappingURL=example.css.map */

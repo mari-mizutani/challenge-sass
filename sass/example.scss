@@ -1,5 +1,5 @@
 $shadow : 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
-$general-p : 16px;
+$general-p : 8px;
 
 body {
     font: 100% "Space Mono", monospace;
@@ -32,7 +32,7 @@ section {
 
     @include box-shadow;
 
-    padding: $general-p;
+    padding: $general-p*2;
     margin: 16px;
     clear: both;
     overflow: auto;
@@ -83,7 +83,7 @@ h1 {
 h6 {
     text-align: center;
     font-size: 2em;
-    padding: $general-p*2;
+    padding: $general-p*4;
     margin-bottom: 0px
 }
 
@@ -108,4 +108,21 @@ h6 {
 .warning {
     @extend .message;
     background-color: orange
+}
+
+a.blue{
+    padding:$general-p;
+    color: #fff;
+    &:hover{
+        color:blue;
+        background-color: #fff;
+    }
+}
+
+a.red{
+    @extend .blue;
+    padding:$general-p*2;
+    &:hover{
+        color:red;
+    }
 }
