@@ -1,3 +1,11 @@
+a.blue, a.red {
+  color: #fff;
+}
+
+a.blue:hover, a.red:hover {
+  background-color: #fff;
+}
+
 body {
   font: 100% "Space Mono", monospace;
   color: #2748B3;
@@ -86,7 +94,7 @@ h6 {
   margin-bottom: 0px;
 }
 
-.message, .success, .error, .warning {
+.success, .error, .warning {
   border: 1px solid #ccc;
   padding: 10px;
   color: #2748B3;
@@ -106,14 +114,12 @@ h6 {
   background-color: orange;
 }
 
-a.blue, a.red {
+a.blue {
   padding: 8px;
-  color: #fff;
 }
 
-a.blue:hover, a.red:hover {
+a.blue:hover {
   color: blue;
-  background-color: #fff;
 }
 
 a.red {

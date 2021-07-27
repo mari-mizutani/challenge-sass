@@ -1,3 +1,5 @@
+@import 'link';
+
 $shadow : 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
 $general-p : 8px;
 
@@ -87,7 +89,7 @@ h6 {
     margin-bottom: 0px
 }
 
-.message{
+%message{
     border: 1px solid #ccc;
     padding: 10px;
     color: #2748B3;
@@ -96,31 +98,28 @@ h6 {
 }
 
 .success {
-    @extend .message;
+    @extend %message;
     background-color: green
 }
 
 .error {
-    @extend .message;
+    @extend %message;
     background-color: red
 }
 
 .warning {
-    @extend .message;
+    @extend %message;
     background-color: orange
 }
 
 a.blue{
     padding:$general-p;
-    color: #fff;
     &:hover{
         color:blue;
-        background-color: #fff;
     }
 }
 
 a.red{
-    @extend .blue;
     padding:$general-p*2;
     &:hover{
         color:red;
