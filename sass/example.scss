@@ -113,15 +113,19 @@ h6 {
 }
 
 a.blue{
+    color: $link;
     padding:$general-p;
     &:hover{
         color:blue;
+        background-color: $link-bg;
     }
 }
 
 a.red{
+    color: $link;
     padding:$general-p*2;
     &:hover{
         color:red;
+        background-color: $link-bg;
     }
 }
