@@ -1,4 +1,4 @@
-# Title: SASS: 
+# SASS learning exercise
 
 ## Must-have features
 
@@ -23,3 +23,8 @@ Take some time to think how to do the structure of this exercise, and how many f
 ### Part 3 (optional)
 - Add an option to your compilation to minify your stylesheet!
 Mine was below 1.6k, can you do better? Do you still remember the option to `ls` to make the filesize Human readable?
+
+
+## Description
+
+This was my first time working on SASS, thus I even didn't know what "mixin" means. I've finished most of these exercises for 1 day,and I understand very basic part such as mixin, variable,import now. 
